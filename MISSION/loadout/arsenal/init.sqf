@@ -4,6 +4,11 @@ _faction = _this select 0;
 _unit = _this select 1;
 _type = "";
 
+_done = _unit getVariable ["loaded",false];
+if (_done) exitWith {};
+
+if ((!isPlayer _unit)&&(!isServer)) exitWith {};
+
 if ((!(loadoutStyleAI == "arsenal"))&&(!(isPlayer _unit))) exitWith {};
 
 // RESETS ITEMS ================================================================
@@ -33,3 +38,5 @@ else {
 // CLASSES =====================================================================
 
 #include "faction-list.sqf"
+
+_unit setVariable ["done",true,true];

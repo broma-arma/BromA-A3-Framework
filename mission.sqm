@@ -73,7 +73,7 @@ class Mission
 	randomSeed=4839744;
 	class Intel
 	{
-		briefingName="> BromA Framework A3 - v0.1082";
+		briefingName="> BromA Framework A3 - v0.900";
 		overviewText="** INSERT MISSION DESCRIPTION HERE **";
 		resistanceEast=1;
 		startWind=0.099999994;
@@ -2363,7 +2363,7 @@ class Mission
 						{
 							value="1";
 							parentCls="AGM_ModuleMedical";
-							typeName="PunishNonMedics";
+							typeName="";
 						};
 						class Item5
 						{
@@ -2427,13 +2427,13 @@ class Mission
 						{
 							value="1";
 							parentCls="AGM_ModuleRespawn";
-							typeName="RemoveDeadBodies";
+							typeName="";
 						};
 						class Item2
 						{
 							value="120";
 							parentCls="AGM_ModuleRespawn";
-							typeName="BodyRemoveTimer";
+							typeName="";
 						};
 					};
 					id=141;
