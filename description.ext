@@ -1,0 +1,61 @@
+// ============================================================================================
+// Load the dialog scripts.
+#include "engine\dialogs\loadDialogs.cpp"
+// ============================================================================================
+// F2 - Mission Header
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+class Header
+{
+#include "mission\customize-these-files\mission-header.sqf"
+};
+
+#include "mission\customize-these-files\mission-credits.sqf"
+
+// ============================================================================================
+// F2 - Respawn Settings
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+respawn = 3;
+respawndelay = 4;
+respawnDialog = 0;
+disabledAI = 1;
+maxScore = 75000;
+enableDebugConsole = 1;
+
+// ============================================================================================
+// Loads mission parameters
+class Params { 
+    #include "mission\parameters.sqf" 
+};
+// ============================================================================================
+class RscTitles {
+// ============================================================================================
+// BoN - Declare the Crew Overlay graphics.
+#include "engine\dialogs\crewoverlay.hpp"
+// ============================================================================================
+};
+class CfgFunctions
+{
+#include "optional\view_distance\CfgFunctions.hpp"
+};
+class CfgDebriefing
+{  
+#include "mission\debriefing.sqf"
+};
+class CfgDebriefingSections
+{
+    class End1
+    {
+            title = "Mission details";
+            variable = "endReason";
+    };   
+};
+// ============================================================================================
+class CfgSounds
+{
+	sounds[] = {};                
+};
+
+class CfgMusic
+{
+	tracks[]={};
+};
