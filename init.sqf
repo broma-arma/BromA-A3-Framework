@@ -45,7 +45,7 @@ if (isNull player) then { playerIsJip = true } else { playerIsJip = false };
 //                                                                             |
 //                         DO NOT DISABLE THIS!                                |
 // =============================================================================
-diag_log "==================== LOADING ENGINE-INIT.SQF =========================";
+diag_log time+"==================== LOADING ENGINE-INIT.SQF =========================";
 diag_log "";
              _initHandle = [] execVM "engine\engine-init.sqf";
                           waitUntil{InitEngine};

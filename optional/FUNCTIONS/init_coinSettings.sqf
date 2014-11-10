@@ -10,7 +10,7 @@ if !(useCoinModule) exitWith {};
     _COINpreset = 1;            // What preset will be used - see f\common\f_COINpresets.sqf"    
     
     _groupname = createGroup sideLogic;
-    _coinModule = _groupname createUnit ["ConstructionManager", (getMarkerPos _COINbase), [], 0, "none"];        
+    _coinModule = _groupname createUnit ["ConstructionManager", (getMarkerPos _COINbase), [], 0, "none"];
     {
         if (isPlayer _x) then {
             _coinModule synchronizeObjectsAdd [_x];

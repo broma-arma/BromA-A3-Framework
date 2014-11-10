@@ -33,8 +33,7 @@ class Mission
 		"agm_respawn",
 		"A3_Armor_F_Panther",
 		"agm_core",
-		"agm_interaction",
-		"mcc_sandbox"
+		"agm_interaction"
 	};
 	addOnsAuto[]=
 	{
@@ -49,7 +48,6 @@ class Mission
 		"agm_respawn",
 		"agm_core",
 		"agm_interaction",
-		"mcc_sandbox",
 		"A3_Soft_F_MRAP_01",
 		"A3_Animals_F_Rabbit",
 		"A3_Soft_F_HEMTT",
