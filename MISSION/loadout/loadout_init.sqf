@@ -249,6 +249,7 @@ _addtoCargo = {
         switch(_type) do {
             case("weapon"): { _unit addWeaponCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
             case("magazine"): { _unit addMagazineCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
+            case("item"): { _unit additemCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
         };
     };
 };
