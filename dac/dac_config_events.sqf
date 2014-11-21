@@ -22,7 +22,7 @@ switch (_TypNumber) do
 //-------------------------------------------------------------------------------------------------------------------------------------------
 	case 1:
 	{
-            _loadout = "opfor";
+            _loadout = "redfor";
             
 		_Events_Unit_S =	[ 
 								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],

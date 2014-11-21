@@ -4,7 +4,7 @@ _faction = _this select 0;
 _unit = _this select 1;
 _type = "";
 
-_done = _unit getVariable ["loaded",false];
+_done = _unit getVariable ["done",false];
 if (_done) exitWith {};
 
 if ((!isPlayer _unit)&&(!isServer)) exitWith {};

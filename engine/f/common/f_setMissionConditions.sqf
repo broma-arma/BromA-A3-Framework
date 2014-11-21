@@ -277,6 +277,20 @@ switch (_timeLimit) do
 publicvariable "TimerLimit";
 // ====================================================================================
 
+// SELECT MISSION SETUP TIME
+// Sets the time players have to prepare in adversarial missions
+
+switch (_setuptime) do
+{
+	case 0:	{ MissionSetup = 60*1 };
+        case 1:	{ MissionSetup = 60*3 };
+        case 2:	{ MissionSetup = 60*5 };
+        case 3:	{ MissionSetup = 60*10 };
+       
+};
+publicvariable "MissionSetup";
+// ====================================================================================
+
 // CIVILIAN CASUALTY CAP
 // Ends the mission whenever a certain number of civilians has been killed
 
