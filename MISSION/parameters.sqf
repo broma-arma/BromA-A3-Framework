@@ -96,7 +96,7 @@
     {
             title = "Player lives";
             values[] = {0,1,2,3};
-            texts[] = {"0","3","5","10"};
+            texts[] = {"1","3","5","10"};
             default = 1;
             code = "player_lives = %1";
     };

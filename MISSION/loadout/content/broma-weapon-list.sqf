@@ -159,6 +159,6 @@ _UZI = ["RH_muzi","RH_30Rnd_9x19_UZI"];
 
 //                               SLATTS AT-4
 
-_AT4 = ["launch_AT4_F","AT4_HEAT"];
-_AT4HEDP = ["launch_AT4_HEDP_F","AT4_HEAT"];
-_AT4HP = ["launch_AT4_HP_F","AT4_HP"];
+_AT4 = ["rhs_weap_M136","rhs_m136_mag"];
+_AT4HEDP = ["rhs_weap_M136","rhs_m136_mag"];
+_AT4HP = ["rhs_weap_M136","rhs_m136_mag"];

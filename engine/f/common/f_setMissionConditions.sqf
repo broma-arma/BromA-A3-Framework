@@ -391,7 +391,7 @@ switch (_playerlives) do
 {
 	case 0:
 	{
-           initialPlayerLives = 0;
+           initialPlayerLives = 1;
 	};
 	case 1:
 	{

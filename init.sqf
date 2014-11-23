@@ -52,15 +52,15 @@ diag_log "";
 diag_log "====================== ENGINE INIT LOADED ============================";
 
 // =============================================================================
-//        Some basic scripts that are run for both new players and JIP         |    
+//        Some basic scripts that are run for both new players and JIP         |
 // =============================================================================
          _playerHandle = [] execVM (CUSTOM_FILES_PATH+"player_init.sqf");
                  waitUntil{(scriptDone(_playerHandle))};
-                     
+
 diag_log "===================== PLAYER INITIALIZED =============================";
 
 player sidechat format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.",(diag_tickTime-startTime)];
-                            
+
 //==============================================================================
 //       Everything below this point will run after the mission begins.        |
 //                                                                             |
@@ -87,13 +87,9 @@ player sidechat format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.
 //             BromA - Simple loading screen to avoid people                   |
 //                    moving around and generating desync                      |
 //==============================================================================
-//                       [] call FNC_loading_screen;
-
-//==============================================================================
-//                        Holsters player weapons.
-//============================================================================== 
+                         [] call FNC_loading_screen;
+                         
                                    sleep 0.5;
-                          [] call FNC_putWeaponAway;
 
 diag_log "======================= GAME STARTING ================================";
 diag_log "**********************************************************************";
@@ -103,10 +99,10 @@ currentLives = [player] call fnc_getLives;
 
 if ((currentLives) == 0) then {
     deadPlayersArray set [count deadPlayersArray, getPlayerUID player]; publicVariable "deadPlayersArray";
-    
+
     [player] spawn fnc_prepareSpectator;
 
-    [] execVM ENGINE_path+"spectator\specta.sqf";    
+    [] spawn INIT_spectator;
 } else {
     // Temporary hack for JIPs
     sleep 3;

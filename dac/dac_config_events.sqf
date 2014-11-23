@@ -34,12 +34,12 @@ switch (_TypNumber) do
 								[]
 							];
 		_Events_Unit_V = 	[
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								[],
-								[],
-								[],
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_T = 	[
@@ -89,12 +89,12 @@ switch (_TypNumber) do
 								[]
 							];
 		_Events_Unit_V = 	[
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								[],
-								[],
-								[],
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_T = 	[

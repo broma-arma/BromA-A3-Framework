@@ -6,7 +6,7 @@
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 class Header
 {
-#include "mission\customize-these-files\mission-header.sqf"
+    #include "mission\customize-these-files\mission-header.sqf"
 };
 
 #include "mission\customize-these-files\mission-credits.sqf"
@@ -30,16 +30,17 @@ class Params {
 class RscTitles {
 // ============================================================================================
 // BoN - Declare the Crew Overlay graphics.
-#include "engine\dialogs\crewoverlay.hpp"
+    #include "engine\dialogs\crewoverlay.hpp"
 // ============================================================================================
 };
 class CfgFunctions
 {
-#include "optional\view_distance\CfgFunctions.hpp"
+    #include "optional\view_distance\CfgFunctions.hpp"
+    #include "engine\spect\functions.hpp"
 };
 class CfgDebriefing
 {  
-#include "mission\debriefing.sqf"
+    #include "mission\debriefing.sqf"
 };
 class CfgDebriefingSections
 {

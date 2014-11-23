@@ -21,9 +21,12 @@ if (isServer) then { // server
   };
 };
 
-if (!isDedicated) then { // player  
+if (!isDedicated) then { // player 
 
   waitUntil {!isNull player};
+  
+  _isDead = player getVariable ["isDead",false];
+  if (_isDead) exitWith {};  
   
   if (side player == _side) then {
   

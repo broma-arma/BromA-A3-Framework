@@ -1,14 +1,18 @@
-class TAWVD
+class CHVD
 {
-	tag = "TAWVD";
-	class TAW_VD
+	tag = "CHVD";
+	class functions
 	{
 		file = "optional\view_distance";
+		class onCheckedChanged {};
 		class onSliderChange {};
-		class onTerrainChange {};
-		class updateViewDistance {};
-		class openTAWVD {};
-		class trackViewDistance {};
-		class tawvdInit {postInit = 1;};
+		class onLBSelChanged {};
+		class onEBinput {};
+		class onEBterrainInput {};
+		class selTerrainQuality {};
+		class updateTerrain {};
+		class updateSettings {};		
+		class openDialog {};
+		class init {postInit = 1;};
 	};
 };

@@ -18,14 +18,11 @@
 //      Before we get started, write down the author name and the mission
 //          version just so you can keep track of the credits easier!
 //
-//   Add the mission makers you want to be able to use MCC to this array!      |
 //                                                                             |
 // ============================================================================
 
 missionAuthorName = "Mission Maker";
-missionVersion = "v0";
-
-allowedMissionMakers = ["Nife","Royal","Knite"];
+missionVersion =    "v0";
 
 // ============================================================================
 //                          == MISSION GAMEMODE ==                             |
@@ -40,6 +37,15 @@ allowedMissionMakers = ["Nife","Royal","Knite"];
 missionGameMode = "coop";
 
 // ============================================================================
+//                              == MAP COVER ==                                |
+
+//   Creates a simple cover to hide the rest of the map - linked to the "ao"   |
+//                                  marker.                                    
+// ============================================================================
+
+coverMap = true;
+
+// ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
 
 //              Configures how the units' loadout will be loaded.              |
@@ -52,7 +58,7 @@ missionGameMode = "coop";
 // ============================================================================
 
 loadoutStylePlayer = "arsenal";
-loadoutStyleAI = "arsenal";
+loadoutStyleAI =     "arsenal";
 
 // ============================================================================
 //                        == PLAYERS INFORMATION ==                            |
@@ -92,10 +98,10 @@ DAC_Res_Side = 1;                    // Side the independent are friendly to:
 // ============================================================================
 useCasualtyCap = false;                         // Enable module - true or false.
 
-    casualtyGroupPlayer = [alpha_grp_blu, bravo_grp_blu, charlie_grp_blu, delta_grp_blu];
+    casualtyGroupPlayer = [alpha_grp_blu1, alpha_grp_blu2, bravo_grp_blu1, bravo_grp_blu2, charlie_grp_blu1, charlie_grp_blu2, delta_grp_blu1, delta_grp_blu2];
     // Casualty groups for the Player group
     
-    casualtyGroupEnemy =  [alpha_grp_op, bravo_grp_op, charlie_grp_op, delta_grp_op];           
+    casualtyGroupEnemy =  [alpha_grp_op1, alpha_grp_op2, bravo_grp_op1, bravo_grp_op2, charlie_grp_op1, charlie_grp_op2, delta_grp_op1, delta_grp_op2];
     // Casualty group for the Enemy group - Ignore if COOP
     
 // =============================================================================
@@ -311,7 +317,7 @@ DAC_STRPlayers = [
 // =============================================================================
 // =============================================================================
 publicVariable "loadoutStyleAI"; publicVariable "loadoutStylePlayer";
-publicVariable "allowedMissionMakers";
+publicVariable "allowedMissionMakers"; publicVariable "coverMap";
 /*
 publicVariable "missionGameMode"; publicVariable "setupSize"; publicVariable "missionEnemySide";
 publicVariable "missionAuthorName"; publicVariable "missionVersion";

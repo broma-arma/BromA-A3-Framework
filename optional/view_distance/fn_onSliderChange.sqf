@@ -1,39 +1,76 @@
-/*
-	File: fn_onSliderChange.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Called when the slider is changed for any field and updates the view distance for it.
-*/
-private["_mode","_value"];
-_mode = [_this,0,-1,[0]] call BIS_fnc_param;
-_value = [_this,1,-1,[0]] call BIS_fnc_param;
-if(_mode == -1 OR _value == -1) exitWith {};
-disableSerialization;
+private ["_sliderPos","_updateType"];
+_varType1 = [_this, 0, "", [""]] call BIS_fnc_param;
+_slider1 = [_this, 1, controlNull, [0, controlNull]] call BIS_fnc_param;
+_sliderPos = [_this, 2, 0, [0]] call BIS_fnc_param;
+_text1 = [_this, 3, controlNull, [0, controlNull]] call BIS_fnc_param;
+_varType2 = [_this, 4, "", [""]] call BIS_fnc_param;
+_slider2 = [_this, 5, controlNull, [0, controlNull]] call BIS_fnc_param;
+_text2 = [_this, 6, controlNull, [0, controlNull]] call BIS_fnc_param;
+_syncVar = [_this, 7, "", [""]] call BIS_fnc_param;
 
-switch (_mode) do
-{
-	case 0:
-	{
-		tawvd_foot = round(_value);
-		ctrlSetText[2902,format["%1",round(_value)]];
-                ctrlSetText[-1,format["                           | FPS: %1",round(diag_fps)]];
-		[] call TAWVD_fnc_updateViewDistance;
+if (count _this < 8) then {
+	_updateType = 2;
+} else {
+	if (call compile _syncVar) then {
+		_updateType = 3;
+	} else {
+		_updateType = 1;
 	};
-	
-	case 1:
-	{
-		tawvd_car = round(_value);
-		ctrlSetText[2912,format["%1",round(_value)]];
-                ctrlSetText[-1,format["                           | FPS: %1",round(diag_fps)]];
-		[] call TAWVD_fnc_updateViewDistance;
+};
+
+switch (_updateType) do {
+	case 1: {				
+		sliderSetPosition [_slider1, _sliderPos min CHVD_maxView];
+		ctrlSetText [_text1, str round (_sliderPos min CHVD_maxView)];
+		sliderSetRange [_slider2, 0, _sliderPos min CHVD_maxView];
+                ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
+			
+		call compile format ["%1 = %2", _varType1, _sliderPos min CHVD_maxView];
+		call compile format ["profileNamespace setVariable ['%1',%1]", _varType1];
+		
+		if ((call compile _varType2) > _sliderPos) then {
+			sliderSetPosition [_slider2, _sliderPos min CHVD_maxObj];
+			ctrlSetText [_text2, str round (_sliderPos min CHVD_maxObj)];
+
+			call compile format ["%1 = %2", _varType2, _sliderPos min CHVD_maxObj];
+			call compile format ["profileNamespace setVariable ['%1',%1]", _varType2];
+		};
+		
+		[_updateType] call CHVD_fnc_updateSettings;
 	};
-	
-	case 2:
-	{
-		tawvd_air = round(_value);
-		ctrlSetText[2922,format["%1",round(_value)]];
-                ctrlSetText[-1,format["                           | FPS: %1",round(diag_fps)]];
-		[] call TAWVD_fnc_updateViewDistance;
+	case 2: {		
+		sliderSetPosition [_slider1, _sliderPos min CHVD_maxObj];
+		ctrlSetText [_text1, str round (_sliderPos min CHVD_maxObj)];
+                ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
+			
+		call compile format ["%1 = %2", _varType1, _sliderPos min CHVD_maxObj];
+		call compile format ["profileNamespace setVariable ['%1',%1]", _varType1];
+			
+		[_updateType] call CHVD_fnc_updateSettings;
 	};
+	case 3: {		
+		sliderSetPosition [_slider1, _sliderPos min CHVD_maxView];
+		ctrlSetText [_text1, str round (_sliderPos min CHVD_maxView)];
+		sliderSetRange [_slider2, 0, _sliderPos min CHVD_maxView];
+                ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
+			
+		call compile format ["%1 = %2", _varType1, _sliderPos min CHVD_maxView];
+		call compile format ["profileNamespace setVariable ['%1',%1]", _varType1];
+		
+		if ((call compile _varType2) > _sliderPos) then {
+			sliderSetPosition [_slider2, _sliderPos min CHVD_maxObj];
+			ctrlSetText [_text2, str round (_sliderPos min CHVD_maxObj)];
+
+			call compile format ["%1 = %2", _varType2, _sliderPos min CHVD_maxObj];
+			call compile format ["profileNamespace setVariable ['%1',%1]", _varType2];
+		};
+		
+		sliderSetPosition [_slider2, _sliderPos min CHVD_maxObj];
+		ctrlSetText [_text2, str round (_sliderPos min CHVD_maxObj)];	
+		
+		call compile format ["%1 = %2", _varType2, _sliderPos min CHVD_maxObj];
+		call compile format ["profileNamespace setVariable ['%1',%1]", _varType2];
+		
+		[_updateType] call CHVD_fnc_updateSettings;
+	};	
 };

@@ -5,7 +5,7 @@ _handled = false;
 
 if(_button in actionKeys "TeamSwitch") then{
 	if(not dialog) then{
-		[] call TAWVD_fnc_openTAWVD;
+		[] call CHVD_fnc_openDialog;
 	} else{
 		closeDialog 0;
 	};

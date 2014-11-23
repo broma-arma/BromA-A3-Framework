@@ -23,7 +23,6 @@ if !(playerIsJip) then {
 //==============================================================================
 //                 AI listens to players talking on the radio.
 //==============================================================================
-// WAITING ON API
                         [] spawn INIT_ai_hear_TFAR;
                             
 //==============================================================================
@@ -57,6 +56,7 @@ if !(playerIsJip) then {
 //                      Mutes in-game radio commands.
 //==============================================================================
                                0 fadeRadio 0; 
+                            enableSentences false;
                                
 //==============================================================================
 //                        Disables greeting menu.
@@ -67,7 +67,5 @@ if !(playerIsJip) then {
 //         Remove JIPs from the game according to  mission settings.
 //==============================================================================
                            [] call FNC_remove_jip;
-                           
-headbugR = ["Fix Headbug", {alive player}, { [] spawn fnc_fixHeadbug }, false] call AGM_Interaction_fnc_addInteractionSelf;
                            
 diag_log format ["== PLAYER %1: PLAYER INITIALIZED =======================================",player];

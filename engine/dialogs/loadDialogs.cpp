@@ -1,5 +1,5 @@
 #include "Common.hpp"
-#include "dialog.hpp"
+#include "dialog_view.hpp"
 #include "bon_Settings.hpp"
 #include "diag.hpp"
-#include "spectating.hpp"
+#include "config_specta.hpp"

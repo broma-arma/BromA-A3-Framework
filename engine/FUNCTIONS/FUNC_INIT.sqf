@@ -3,9 +3,6 @@ tf_same_lr_frequencies_for_side = true;
 tf_no_auto_long_range_radio = true;
 ace_sys_interaction_key_self = 211;
 
-if (isNil"alpha_grp_blu") then {alpha_grp_blu = grpNull};if (isNil"bravo_grp_blu") then {bravo_grp_blu = grpNull};if (isNil"charlie_grp_blu") then {charlie_grp_blu = grpNull};if (isNil"delta_grp_blu") then {delta_grp_blu = grpNull};
-if (isNil"alpha_grp_op") then {alpha_grp_op = grpNull};if (isNil"bravo_grp_op") then {bravo_grp_op = grpNull};if (isNil"charlie_grp_op") then {charlie_grp_op = grpNull};if (isNil"delta_grp_op") then {delta_grp_op = grpNull};
-if (isNil"alpha_grp_ind") then {alpha_grp_ind = grpNull};if (isNil"bravo_grp_ind") then {bravo_grpind = grpNull};if (isNil"charlie_grp_ind") then {charlie_grp_ind = grpNull};if (isNil"delta_grp_ind") then {delta_grp_ind = grpNull};
 if (isNil "savedLoadouts") then { savedLoadouts = []; publicVariable "savedLoadouts" };
 if (isNil"playerLives") then { playerLives = []; publicVariable "playerLives" };
 if (isNil"deadPlayersArray") then { deadPlayersArray = []; publicVariable "deadPlayersArray" };
@@ -38,6 +35,21 @@ FNC_assignGear = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_assign
 
 // =============================================================================
 FNC_fixHeadbug = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_fixHeadbug.sqf");
+// =============================================================================
+
+// =============================================================================
+FNC_garrisonUnits = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_garrison.sqf");
+// =============================================================================
+
+// =============================================================================
+FNC_coverMap = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_coverMap.sqf");
+// =============================================================================
+
+// =============================================================================
+FNC_newMarkerIcon = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_newMarkerIcon.sqf");
+FNC_newMarkerIconLocal = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_newMarkerIconLocal.sqf");
+FNC_newMarkerArea = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_newMarkerArea.sqf");
+FNC_newMarkerAreaLocal = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_newMarkerAreaLocal.sqf");
 // =============================================================================
 
 // =============================================================================
@@ -80,11 +92,6 @@ INIT_getTeamKill = {
 // =============================================================================
 
 // =============================================================================
-// Waiting on API
-//INIT_ai_hear_TFAR = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"init_aiHearsTFAR.sqf");
-// =============================================================================
-
-// =============================================================================
 FNC_callCamera = compile preprocessFileLineNumbers "a3\functions_f\Debug\fn_camera.sqf";
 // =============================================================================
 
@@ -98,6 +105,10 @@ INIT_debug = compile preprocessfilelinenumbers (ENGINE_FUNC_PATH+"init_debug.sqf
 
 // =============================================================================
 FNC_stamp_time = {[] execVM (ENGINE_FUNC_PATH+"fnc_stampTime.sqf")};
+// =============================================================================
+
+// =============================================================================
+FNC_dac_attack = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_dac_attack.sqf");
 // =============================================================================
 
 // =============================================================================

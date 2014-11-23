@@ -1,11 +1,32 @@
 // =============================================================================
 #include "folder_path.sqf"
 
+// =============================================================================
+//          Initializes all possible groups whether they exist or not.
+// =============================================================================
+if (isNil"alpha_grp_blu1") then {alpha_grp_blu1 = grpNull}; if (isNil"alpha_grp_blu2") then {alpha_grp_blu2 = grpNull};
+if (isNil"bravo_grp_blu1") then {bravo_grp_blu1 = grpNull}; if (isNil"bravo_grp_blu2") then {bravo_grp_blu2 = grpNull};
+if (isNil"charlie_grp_blu1") then {charlie_grp_blu1 = grpNull}; if (isNil"charlie_grp_blu2") then {charlie_grp_blu2 = grpNull};
+if (isNil"delta_grp_blu1") then {delta_grp_blu1 = grpNull}; if (isNil"delta_grp_blu2") then {delta_grp_blu2 = grpNull};
+
+if (isNil"alpha_grp_op1") then {alpha_grp_op1 = grpNull}; if (isNil"alpha_grp_op2") then {alpha_grp_op2 = grpNull};
+if (isNil"bravo_grp_op1") then {bravo_grp_op1 = grpNull}; if (isNil"bravo_grp_op2") then {bravo_grp_op2 = grpNull};
+if (isNil"charlie_grp_op1") then {charlie_grp_op1 = grpNull}; if (isNil"charlie_grp_op2") then {charlie_grp_op2 = grpNull};
+if (isNil"delta_grp_op1") then {delta_grp_op1 = grpNull}; if (isNil"delta_grp_op2") then {delta_grp_op2 = grpNull};
+
+if (isNil"alpha_grp_ind1") then {alpha_grp_ind1 = grpNull}; if (isNil"alpha_grp_ind2") then {alpha_grp_ind2 = grpNull};
+if (isNil"bravo_grp_ind1") then {bravo_grp_ind1 = grpNull}; if (isNil"bravo_grp_ind2") then {bravo_grp_ind2 = grpNull};
+if (isNil"charlie_grp_ind1") then {charlie_grp_ind1 = grpNull}; if (isNil"charlie_grp_ind2") then {charlie_grp_ind2 = grpNull};
+if (isNil"delta_grp_ind1") then {delta_grp_ind1 = grpNull}; if (isNil"delta_grp_ind2") then {delta_grp_ind2 = grpNull};
+// =============================================================================
+
 call compile preprocessfilelinenumbers (ENGINE_FUNC_PATH+"func_init.sqf");
 call compile preprocessfilelinenumbers (OPTIONAL_FUNC_PATH+"func_init.sqf");
+
 diag_log "==================== ALL FUNCTIONS COMPILED ==========================";
 
 call compile preprocessfilelinenumbers (CUSTOM_FILES_PATH+"mission-settings.sqf");
+
 diag_log "==================== MISSION SETTINGS LOADED =========================";
 
 // Common Local Variables - WARNING: DO NOT DISABLE THIS COMPONENT
@@ -45,6 +66,11 @@ if !(isMultiplayer) then { [] execVM (ENGINE_PATH+"f\common\f_missionMakerTelepo
 // =============================================================================
 
 // =============================================================================
+// BromA - Covers the map if the mission maker enabled the option.
+[] call fnc_coverMap;
+// =============================================================================
+
+// =============================================================================
 // F2 - Multiplayer Ending Controller
 f_endSelected = -1; [] execVM (ENGINE_PATH+"f\common\f_mpEndSetUp.sqf");
 // =============================================================================
@@ -63,7 +89,7 @@ f_endSelected = -1; [] execVM (ENGINE_PATH+"f\common\f_mpEndSetUp.sqf");
 // =============================================================================
 // Initalizes the Distance View Draw system
 if !(missionGameMode == "tvt") then {
-[] execVM (OPTIONAL_PATH+"view_distance\fn_tawvdInit.sqf") };
+[] execVM (OPTIONAL_PATH+"view_distance\fn_init.sqf") };
 // =============================================================================
 
 // =============================================================================

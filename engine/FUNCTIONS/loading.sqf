@@ -13,7 +13,7 @@ Remember to ALWAYS read the briefing.\n
 Take your time to plan your tactics with your teammates.";
 }; publicVariable "briefLoad";
 //==============================================================================
-
+[] call FNC_putWeaponAway;
 // Stop the players from moving.
 player enableSimulation false;
 player switchMove "amovpercmstpslowwrfldnon_player_idlesteady03";  //lower players weapon

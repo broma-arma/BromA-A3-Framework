@@ -13,32 +13,31 @@ Radio information and Callsigns
 === <font color='#fad425'>SHORT RANGE</font color> ===<br/><br/>
 <font color='#fad425'>Infantry:</font color><br/>
 <br/>
-Alpha - ch.1 343<br/>
-Bravo - ch.2 343<br/>
-Charlie - ch.3 343<br/>
-Delta - ch.4 343<br/>
-Zero - ch.11 343<br/>
+Alpha - ch.1 SR<br/>
+Bravo - ch.2 SR<br/>
+Charlie - ch.3 SR<br/>
+Delta - ch.4 SR<br/>
+Zero - ch.11 SR<br/>
 ----------------- <br/>
 <font color='#fad425'>Other:</font color><br/>
 <br/>
-Hermes - ch.5 343<br/>
-Overwatch - ch.6 343<br/>
-Pegasus - ch.7 343<br/>
-Titan - ch.8 343<br/>
-Lance - ch.9 343<br/>
+Hermes - ch.5 SR<br/>
+Overwatch - ch.6 SR<br/>
+Pegasus - ch.7 SR<br/>
+Titan - ch.8 SR<br/>
+Lance - ch.9 SR<br/>
 <br/>
 --------------------------------------------------------------<br/>
 === <font color='#fad425'>LONG RANGE</font color> ===<br/><br/>
 <font color='#fad425'>Infantry:</font color><br/>
 <br/>
-Main command net: ch.1 148 UHF<br/>
-Rescue net: ch.5 117F<br/>
+Main command net: ch.1 LR<br/>
 ----------------<br/>
 <font color='#fad425'>Other:</font color><br/>
 <br/>
-CAS/JTAC net: ch.1 117F<br/>
-Aerial net: ch.2 117F<br/>
-Overwatch net: ch.3 117F
+CAS/JTAC net: ch.1 LR<br/>
+Aerial net: ch.2 LR<br/>
+Overwatch net: ch.3 LR
 
 "]];
 // =============================================================================
