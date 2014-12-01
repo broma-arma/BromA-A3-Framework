@@ -28,6 +28,7 @@ titletext [format["Loading mission \n\n 75%2 \n[=======---] \n\n%1", briefLoad, 
 sleep 2;
 titletext [format["Loading mission \n\n 100%2 \n[=========] \n\n%1", briefLoad, "%"], "BLACK FADED",0];
 sleep 7;
+titleText ["", "PLAIN"];
 // Players can now move again.
 _intro = [] execVM (CUSTOM_FILES_PATH+"intro.sqf");
 

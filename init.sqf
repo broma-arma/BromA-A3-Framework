@@ -11,12 +11,12 @@
 
 
                        Welcome to the BromA Framework A3.
-                      
+
                     In order to get started, open the folder
                       "mission\customize_these_files",
           start editing the files inside, and you're pretty much set!
-                      
-         That means you're completely free to ignore the rest of this.         
+
+         That means you're completely free to ignore the rest of this.
 
 
 
@@ -69,26 +69,26 @@ player sidechat format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.
 //==============================================================================
 
 //==============================================================================
+//             BromA - Simple loading screen to avoid people                   |
+//                    moving around and generating desync                      |
+//==============================================================================
+                         [] call FNC_loading_screen;
+
+//==============================================================================
 //             BromA - Server saves the current game time                      |
 //==============================================================================
                           [] call FNC_stamp_time;
-                          
+
 //==============================================================================
 //                       Syncronizes current server time.
 //==============================================================================
                [] execVM ENGINE_FUNC_PATH+"fnc_syncTime.sqf";
-               
+
 //==============================================================================
 //          Assigns player gear and handles other connection things.
 //==============================================================================
                             [] call fnc_onConnect;
 
-//==============================================================================
-//             BromA - Simple loading screen to avoid people                   |
-//                    moving around and generating desync                      |
-//==============================================================================
-                         [] call FNC_loading_screen;
-                         
                                    sleep 0.5;
 
 diag_log "======================= GAME STARTING ================================";

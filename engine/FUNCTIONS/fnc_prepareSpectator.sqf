@@ -13,7 +13,6 @@ removeAllWeapons _unit;
 _unit unlinkItem "ItemRadio";
 _unit removeItem "ItemRadio";
 
-_unit setVariable ["tf_forcedCurator", true];
 _unit setVariable ["tf_unable_to_use_radio", true];
 
 [_unit] joinsilent grpnull;

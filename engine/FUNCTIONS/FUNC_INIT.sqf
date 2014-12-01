@@ -136,7 +136,7 @@ INIT_ai_hear_TFAR = compile preprocessfilelinenumbers (ENGINE_FUNC_PATH+"INIT_ai
 // =============================================================================
 
 // =============================================================================
-FNC_loading_screen = compile preprocessfilelinenumbers (ENGINE_FUNC_PATH+"loading.sqf");
+FNC_loading_screen = compile preprocessfilelinenumbers (ENGINE_FUNC_PATH+"fnc_loading.sqf");
 // =============================================================================
 
 // =============================================================================
