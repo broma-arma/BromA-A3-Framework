@@ -43,11 +43,11 @@ mandatoryTasksPLAYER = mandatoryTasksPLAYER +
 
 ["taskMain"];
 
-[mandatoryTasksPLAYER,missionfailEnd,missionwinEnd] call FNC_check_task;
+[mandatoryTasksPLAYER,missionfailEnd,missionwinEnd] spawn FNC_check_task;
 diag_log format ["== SERVER: INITIALIZED PLAYER TASKS %1 ====================",mandatoryTasksPLAYER];
 // =============================================================================
 
-if !(missionGameMode == "coop") exitWith {};
+if (missionGameMode == "coop") exitWith {};
 
 // =============================================================================
 // CHECKS TASKS FOR THE ENEMIES
@@ -59,6 +59,6 @@ mandatoryTasksENEMY = mandatoryTasksENEMY +
 
 ["taskMainEnemy"];
 
-[mandatoryTasksENEMY,missionfailEnd,genericEnding] call FNC_check_task;
+[mandatoryTasksENEMY,missionfailEnd,genericEnding] spawn FNC_check_task;
 diag_log format ["== SERVER: INITIALIZED ENEMY TASKS %1 ====================",mandatoryTasksENEMY];
 // =============================================================================

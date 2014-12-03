@@ -3014,7 +3014,7 @@ class Mission
 			text="BLUFOR ZONE";
 			name="z1";
 			expCond="time > 1";
-			expActiv="zone = [""z1"",[1,0,2],[4,1,10,40],[10,4,10,40],[],[],[1,1,1,1]] spawn DAC_Zone;";
+			expActiv="zone = [""z1"",[1,0,2],[4,1,10,40],[],[],[],[1,1,1,1]] spawn DAC_Zone;";
 			class Effects
 			{
 			};
