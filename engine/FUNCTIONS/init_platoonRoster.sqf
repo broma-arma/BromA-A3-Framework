@@ -34,7 +34,7 @@ while {true} do {
                 _isMedic = getNumber (configFile >> "cfgVehicles" >> typeOf _x >> "attendant");
 
                 if (_playerLeader) then { _padding = "" } else { _padding = "     " };
-                if (_IsMedic==1) then { _sign = " (<img image='optional\team_roster\f\med_icon.paa' width='16' heigth='16' />)" } else { _sign = "" };
+                if (_IsMedic==1) then { _sign = " (<img image='mission\images\med_icon.paa' width='16' heigth='16' />)" } else { _sign = "" };
 
                 switch (rankID _x) do
                 {

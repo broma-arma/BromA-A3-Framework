@@ -6,11 +6,12 @@ _center = createCenter sideLogic;
 _group = createGroup _center;
 _pos = getMarkerPos "ao";
 _size = getMarkerSize "ao";
+_rot = markerDir "ao";
 
 _area = _group createUnit ["LocationArea_F", _pos,[],0.5,"NONE"];
 
 _trg = createTrigger["EmptyDetector", _pos]; 
-_trg setTriggerArea [_size select 0, _size select 0, 0, true];
+_trg setTriggerArea [_size select 0, _size select 1, _rot, true];
 
 _logic = _group createUnit ["Logic", [0,0,0],[],0.5,"NONE"];
 
