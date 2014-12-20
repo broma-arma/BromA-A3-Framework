@@ -36,7 +36,7 @@ _laser = "acc_pointer_IR";
 
 // Suppressors
 _supG3 = "hlc_muzzle_snds_g3";
-_supHK33 = hlc_muzzle_snds_HK33;
+_supHK33 = "hlc_muzzle_snds_HK33";
 _supFAL = "hlc_muzzle_snds_fal";
 _supM14 = "hlc_muzzle_snds_M14";
 _sup545AK = "hlc_muzzle_545SUP_AK";
