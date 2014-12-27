@@ -89,6 +89,7 @@ INIT_getTeamKill = {
     player addEventHandler ["Hit", {_this execVM (ENGINE_FUNC_PATH+"init_getTeamKill.sqf")}];
     player addEventHandler ["Killed", {_this execVM (ENGINE_FUNC_PATH+"init_getTeamKill.sqf")}];
 };
+
 // =============================================================================
 
 // =============================================================================

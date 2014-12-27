@@ -13,7 +13,7 @@ _isLeader = isFormationLeader _unit;
 // First we remove all the already existing items from the default units.
 
 if (_isMan) then {
-    removeallweapons _unit; 
+    removeallweapons _unit;
     removeallitems _unit;
     clearWeaponCargo _unit;
     clearmagazinecargo _unit;
@@ -186,6 +186,18 @@ _addAmmo = {
     };
 };
 
+_addItem = {
+    _kind = _this select 0;
+    _amount = _this select 1;
+    if (_isMan) then {
+        if (typeName _kind == "ARRAY") then { for "_i" from 1 to _amount do { if ((vest _unit)=="") then {_unit addItem (_kind select 1)} else {_unit addItemToVest (_kind select 1)}};
+        } else { for "_i" from 1 to _amount do {if ((vest _unit)=="") then {_unit addItem _kind} else {_unit addItemToVest _kind}}};
+    } else {
+        if (typeName _kind == "ARRAY") then { _unit addItemCargoGlobal [(_kind select 1),_amount];
+        } else { _unit addItemCargoGlobal [_kind,_amount] };
+    };
+};
+
 _addWeapon = {
     _kind = _this select 0;
     if _isMan then {    
@@ -249,7 +261,7 @@ _addtoCargo = {
         switch(_type) do {
             case("weapon"): { _unit addWeaponCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
             case("magazine"): { _unit addMagazineCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
-            case("item"): { _unit additemCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
+            case("item"): { _unit addItemCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
         };
     };
 };

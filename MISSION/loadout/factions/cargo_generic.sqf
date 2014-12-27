@@ -15,7 +15,7 @@ switch(_type) do
                     [_rsmoke,25],
                     [_gsmoke,25]
                 ]] spawn _addtoCargo;
-                [[_object,"weapon",
+                [[_object,"item",
                     ["AGM_EarBuds",25]
                 ]] spawn _addtoCargo;                
         };
@@ -29,7 +29,7 @@ switch(_type) do
                     [_rsmoke,25],
                     [_gsmoke,25]
                 ]] spawn _addtoCargo;
-                [[_object,"weapon",
+                [[_object,"item",
                     [_bandage,30],
                     [_morphine,25],
                     [_epi,25],
@@ -49,7 +49,7 @@ switch(_type) do
                     [_rsmoke,10],
                     [_gsmoke,10]
                 ]] spawn _addtoCargo;
-                [[_object,"weapon",
+                [[_object,"item",
                     [_bandage,10],
                     [_morphine,5],
                     [_epi,5],
@@ -71,7 +71,7 @@ switch(_type) do
                     [_rsmoke,30],
                     [_gsmoke,30]
                 ]] spawn _addtoCargo;
-                [[_object,"weapon",
+                [[_object,"item",
                     [_bandage,20],
                     [_morphine,10],
                     [_epi,10],
