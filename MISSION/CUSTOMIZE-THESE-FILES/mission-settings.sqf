@@ -52,8 +52,8 @@ coverMap = true;
 //       until then players can't shoot their weapons or enter vehicles.
 // ============================================================================
 
-use_co_lock = true;
-co_lock_unit = Alpha69Actual;
+use_co_lock = false;
+co_lock_unit = Zero69Actual;
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
