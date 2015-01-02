@@ -73,6 +73,10 @@ FNC_arsenalLoadout = compile preprocessFileLineNumbers (MISSION_PATH+"loadout\ar
 // =============================================================================
 
 // =============================================================================
+FNC_commanderLock = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_commanderLock.sqf");
+// =============================================================================
+
+// =============================================================================
 FNC_onDisconnect = compile preprocessFileLineNumbers (ENGINE_FUNC_PATH+"fnc_onDisconnect.sqf");
 // =============================================================================
 

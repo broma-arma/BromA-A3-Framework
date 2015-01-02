@@ -46,6 +46,16 @@ missionGameMode = "coop";
 coverMap = true;
 
 // ============================================================================
+//                         == COMMANDER LOCK ==                                |
+
+//     Unit declared as the Commander has the option to start the mission,
+//       until then players can't shoot their weapons or enter vehicles.
+// ============================================================================
+
+use_co_lock = true;
+co_lock_unit = Alpha69Actual;
+
+// ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
 
 //              Configures how the units' loadout will be loaded.              |

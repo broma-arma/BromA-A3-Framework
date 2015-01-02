@@ -71,6 +71,11 @@ if !(isMultiplayer) then { [] execVM (ENGINE_PATH+"f\common\f_missionMakerTelepo
 // =============================================================================
 
 // =============================================================================
+// BromA - Locks players from entering vehicles before the commanders say so.
+[] call fnc_commanderLock;
+// =============================================================================
+
+// =============================================================================
 // F2 - Multiplayer Ending Controller
 f_endSelected = -1; [] execVM (ENGINE_PATH+"f\common\f_mpEndSetUp.sqf");
 // =============================================================================
