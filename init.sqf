@@ -59,6 +59,11 @@ diag_log "====================== ENGINE INIT LOADED ============================
 
 diag_log "===================== PLAYER INITIALIZED =============================";
 
+//==============================================================================
+//          Assigns player gear and handles other connection things.
+//==============================================================================
+                            [] call fnc_onConnect;
+
 player sidechat format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.",(diag_tickTime-startTime)];
 
 //==============================================================================
@@ -83,11 +88,6 @@ player sidechat format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.
 //                       Syncronizes current server time.
 //==============================================================================
                [] execVM ENGINE_FUNC_PATH+"fnc_syncTime.sqf";
-
-//==============================================================================
-//          Assigns player gear and handles other connection things.
-//==============================================================================
-                            [] call fnc_onConnect;
 
                                    sleep 0.5;
 
