@@ -70,7 +70,7 @@ class Mission
 	randomSeed=4839744;
 	class Intel
 	{
-		briefingName="> BromA Framework A3 - v0.9408";
+		briefingName="> BromA Framework A3 - v0.9410";
 		overviewText="** INSERT MISSION DESCRIPTION HERE **";
 		resistanceEast=1;
 		startWeather=0.48999998;

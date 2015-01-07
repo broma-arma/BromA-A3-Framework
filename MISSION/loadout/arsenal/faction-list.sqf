@@ -4,7 +4,7 @@ _isTeamLeader = (_type == "FTL")||(_type == "Team Leader");
 _isRifleman = (_type == "rifleman")||(_type == "Rifleman");
 _isRiflemanAT = (_type == "at")||(_type == "Rifleman (AT)");
 _isMarksman = (_type == "marksman")||(_type == "Marksman");
-_isAutorifleman = (_type == "mg")||(_type == "Autorifleman");
+_isAutorifleman = (_type == "ar")||(_type == "Autorifleman");
 _isLifeSaver = (_type == "medic")||(_type == "Combat Life Saver");
 _isGrenadier = (_type == "grenadier")||(_type == "Grenadier");
 
