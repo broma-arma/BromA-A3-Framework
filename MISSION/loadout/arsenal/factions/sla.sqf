@@ -3,7 +3,6 @@ _uniforms = [
 ];
 
 _myUniform = _uniforms call BIS_fnc_selectRandom;
-_myVest = _vests call BIS_fnc_selectRandom;
 
 _unit forceAddUniform _myUniform;
 _headgear = "MNP_Helmet_SOVC_RU";
