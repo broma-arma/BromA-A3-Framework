@@ -1,5 +1,4 @@
 _unit = _this select 0;
-diag_log format ["PLAYER %1: PLAYER DIED, SPECTATING... =============================",_unit];
 
 sleep 5;
 
