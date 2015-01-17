@@ -18,7 +18,7 @@ switch (_this select 0) do
 	case 0:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
-		_setSkill   = [   [0.3,0.4],      [0.3,0.4],    [0.3,0.4],    [0.3,0.4],   [0.3,0.5],  [0.2,0.3], [0.5,0.8],  [0.2,0.4],    [0.3,0.4], [0.3,0.4]];
+		_setSkill    = [  [0.1,0.1],      [0.6,0.9],    [0.6,0.9],   [0.4,0.6],  [0.5,0.7],     [0.4,0.6],[0.3,0.6], [0.4,0.6],    [0.5,0.7],  [0.5,0.7]];
 		_setCombat  = ["green","white","yellow"];
 		_setBehav   = ["careless","safe","aware"];
 		_setSpeed   = ["limited","normal","full"];
@@ -29,7 +29,7 @@ switch (_this select 0) do
 		_setBldgBeh = [4,50,120,600,2];
 		_setPatrol  = ["45 + (20 * (skill _leader))","(60 + (random 60)) + ((skill _leader) * 50)"];
 		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
-		_setSupport = [1,2];//support for other zones //blufor arti
+		_setSupport = [0,0];//support for other zones //blufor arti
 		_setJoin    = 2;
 		_setEmpVeh  = [[150,100],[150,100]];
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
